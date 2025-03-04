@@ -26,7 +26,7 @@ def create_app(config: Any) -> Flask:
     app.config.from_object(config)
 
     # Session cookie configuration
-    app.config['SESSION_COOKIE_NAME'] = 'nyaav3_session'
+    app.config['SESSION_COOKIE_NAME'] = 'synthoria_session'
     app.config['SESSION_COOKIE_SECURE'] = True
     app.config['SESSION_COOKIE_HTTPONLY'] = True
     app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'

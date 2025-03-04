@@ -14,14 +14,13 @@ __pycache__
 
 # Databases
 *.sql
-/test.db
+/synthoria.db
 
 # Webserver
 /uwsgi.sock
 
 # Application
 /install/*
-/config.py
 /es_sync_config.json
 /test_torrent_batch
 

@@ -14,12 +14,14 @@ from nyaa.extensions import db
 app = create_app('config')
 
 NYAA_CATEGORIES: List[Tuple[str, List[str]]] = [
-    ('Anime', ['Anime Music Video', 'English-translated', 'Non-English-translated', 'Raw']),
-    ('Audio', ['Lossless', 'Lossy']),
-    ('Literature', ['English-translated', 'Non-English-translated', 'Raw']),
-    ('Live Action', ['English-translated', 'Idol/Promotional Video', 'Non-English-translated', 'Raw']),
+    ('Voicebanks', ['VOCALOID', 'UTAU', 'Synthesizer V', 'CeVIO', 'Piapro Studio', 'NEUTRINO', 'Other']),
+    ('Software', ['Synthesizers', 'Plugins', 'Tools', 'Applications', 'Games', 'Other']),
+    ('Voice Sequences', ['VSQ/VSQx', 'UST', 'MIDI', 'Other']),
+    ('Reclists', ['Japanese', 'English', 'Chinese', 'Korean', 'Spanish', 'Other']),
     ('Pictures', ['Graphics', 'Photos']),
-    ('Software', ['Applications', 'Games']),
+    ('Audio', ['Songs', 'Demos', 'Other']),
+    ('Video', ['Music Videos', 'Promo Videos', 'Demos', 'Other']),
+    ('Lyrics', ['Japanese', 'English', 'Chinese', 'Korean', 'Spanish', 'Other']),
 ]
 
 

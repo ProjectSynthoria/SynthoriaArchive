@@ -114,7 +114,7 @@ def create_default_metadata_base(torrent, trackers=None, webseeds=None):
         webseeds = db_webseeds if webseeds is None else webseeds
 
     metadata_base = {
-        'created by': 'NyaaV3',
+        'created by': 'Synthoria Archive',
         'creation date': int(torrent.created_utc_timestamp),
         'comment': flask.url_for('torrents.view',
                                  torrent_id=torrent.id,

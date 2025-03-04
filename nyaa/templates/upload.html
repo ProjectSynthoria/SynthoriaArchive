@@ -86,20 +86,20 @@
 			</div>
 			<div class="hidden-xl hidden-lg"><br></div>
 			<div class="btn-group" data-toggle="buttons">
-				<label class="btn btn-danger" title="This torrent is derived from another release">
+				<label class="btn btn-danger" title="This torrent is a repack/reencode/recompress">
 					{{ upload_form.is_remake }}
 					<span class="glyphicon glyphicon-check"></span>
 					<span class="glyphicon glyphicon-unchecked"></span>
 					Remake
 				</label>
-				<label class="btn btn-warning" title="This torrent is a complete batch (eg. season)">
+				<label class="btn btn-warning" title="This torrent is a collection">
 					{{ upload_form.is_complete }}
 					<span class="glyphicon glyphicon-check"></span>
 					<span class="glyphicon glyphicon-unchecked"></span>
 					Complete
 				</label>
 				{% if g.user.is_trusted %}
-				<label class="btn btn-success active" title="Mark torrent trusted">
+				<label class="btn btn-success active" title="Mark torrent as trusted">
 					{{ upload_form.is_trusted(checked="") }}
 					<span class="glyphicon glyphicon-check"></span>
 					<span class="glyphicon glyphicon-unchecked"></span>
