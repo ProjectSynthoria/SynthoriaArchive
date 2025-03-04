@@ -47,8 +47,8 @@ def login():
             ban = models.Ban.banned(user.id, None).first()
             ban_reason = ban.reason if ban else '[No reason provided]'
             ban_str = ('<strong>Login failed!</strong> You are banned. '
-                       'Reason: "{0}" If you believe this is a mistake, contact '
-                       'a moderator on IRC.'.format(ban_reason))
+                       'Reason: "{0}" If you believe this is a mistake, please '
+                       'contact our team.'.format(ban_reason))
             flask.flash(Markup(ban_str), 'danger')
             return flask.redirect(flask.url_for('account.login'))
 
@@ -116,19 +116,17 @@ def register():
 
         if app.config['RAID_MODE_LIMIT_REGISTER']:
             flask.flash(Markup(app.config['RAID_MODE_REGISTER_MESSAGE'] + ' '
-                                     'Please <a href="{}">ask a moderator</a> to manually '
+                                     'Please <a href="{}">ask our team</a> to manually '
                                      'activate your account <a href="{}">\'{}\'</a>.'
-                                     .format(flask.url_for('site.help') + '#irchelp',
-                                             flask.url_for('users.view_user',
+                                     .format(flask.url_for('users.view_user',
                                                            user_name=user.username),
                                              user.username)), 'warning')
 
         elif models.RangeBan.is_rangebanned(user.registration_ip):
             flask.flash(Markup('Your IP is blocked from creating new accounts. '
-                                     'Please <a href="{}">ask a moderator</a> to manually '
+                                     'Please <a href="{}">ask our team</a> to manually '
                                      'activate your account <a href="{}">\'{}\'</a>.'
-                                     .format(flask.url_for('site.help') + '#irchelp',
-                                             flask.url_for('users.view_user',
+                                     .format(flask.url_for('users.view_user',
                                                            user_name=user.username),
                                              user.username)), 'warning')
         else:
