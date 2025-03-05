@@ -95,7 +95,7 @@ MAX_FILES_VIEW = 1000
 
 # Verify uploaded torrents have the given tracker in them?
 ENFORCE_MAIN_ANNOUNCE_URL = True
-MAIN_ANNOUNCE_URL = 'https://tracker.synthoria.moe:6969/announce'
+MAIN_ANNOUNCE_URL = 'udp://tracker.synthoria.moe:6969/announce'
 
 # Tracker API integration - don't mind this
 # TRACKER_API_URL = 'http://127.0.0.1:6881/api'
